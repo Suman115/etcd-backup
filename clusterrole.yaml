@@ -1,14 +1,14 @@
-apiVersion: rbac.authorization.k8s.io/vi
-kind: ClusterRole
-metadata:
-  name: cluster-etcd-backup
-rules:
-- apiGroups: [""]
-  resources:
-    - "nodes"
-  verbs: ["get", "list"]
-- apiGroups: [""]
-  resources:
-    - "pods"
-    - "pods/log"
-verbs: ["gets", "list", "create", "delete", "watch"]
+  1 apiVersion: rbac.authorization.k8s.io/v1
+  2 kind: ClusterRole
+  3 metadata:
+  4   name: cluster-etcd-backup
+  5 rules:
+  6 - apiGroups: [""]
+  7   resources:
+  8     - "nodes"
+  9   verbs: ["get", "list"]
+ 10 - apiGroups: [""]
+ 11   resources:
+ 12     - "pods"
+ 13     - "pods/log"
+ 14   verbs: ["gets", "list", "create", "delete", "watch"]
