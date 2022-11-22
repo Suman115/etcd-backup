@@ -1,0 +1,14 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/vi
+metadata: 
+	name: openshift-backup
+	label:
+		app: openshift-backup
+subjects:
+	- kind: ServiceAccount
+	  name: openshift-backup
+	  namespace: ocp-etcd-backup
+roleRef: 
+	apiGroup: rbac.authorization.k8s.io/vi
+	kind: ClusterRole
+	name: cluster-etcd-backup
