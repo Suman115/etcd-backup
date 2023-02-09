@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: cluster-etcd-backup
+  name: ocp-etcd-backup
 rules:
 - apiGroups: [""]
   resources:
@@ -12,4 +12,3 @@ rules:
     - "pods"
     - "pods/log"
   verbs: ["gets", "list", "create", "delete", "watch"]
-~                                               
